@@ -1,13 +1,11 @@
 {
-  "name": "hello-world",
+  "name": "gsnd",
   "version": "1.0.0",
-  "description": "hellow world",
+  "description": "gsnd",
   "main": "app.js",
   "dependencies": {
     "express": "",
-    "fs": "",
-    "google": "",
-    "google-scraper": ""
+    "google": ""
   },
   "devDependencies": {},
   "scripts": {
