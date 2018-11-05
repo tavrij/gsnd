@@ -1,18 +1,18 @@
-var express = require('express');
-var app = express();
-var google = require('google');
+let express = require('express');
+let app = express();
+let google = require('google');
 app.get('/g/', function(reqq, ress) {
 google.resultsPerPage = 100
-var nextCounter = 0
-var title = reqq.query.title;
-		var results = Array();
+let nextCounter = 0
+let title = reqq.query.title;
+		let results = Array();
 google(title, function (err, res,links){
 	if (err) console.error(err)
 
 
-	for (var i = 0; i < res.links.length; ++i) {
+	for (let i = 0; i < res.links.length; ++i) {
 		results.push(res.links[i])
-		var link = res.links[i];
+		let link = res.links[i];
 		/* console.log(link.title + ' - ' + link.href)
 		console.log(link.description + "\n") */
 		//console.log(results[i]);
@@ -28,9 +28,9 @@ google(title, function (err, res,links){
 	})
 
 });
-/* var port = process.env.PORT || 5000
-var ip = process.env.IP || "127.0.0.1";
+let port = process.env.PORT || 5000
+let ip = process.env.IP || "127.0.0.1";
 
-var server = app.listen(port, function () {
+let server = app.listen(port, function () {
 console.log('app listening at http://%s:%s', ip, port);
-}); */
+});

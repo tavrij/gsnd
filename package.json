@@ -1,19 +1,15 @@
 {
-  "name": "hello-world",
+  "name": "gsnd",
   "version": "1.0.0",
-  "description": "",
+  "description": "gsnd",
   "main": "app.js",
   "dependencies": {
-    "express": "^4.14.1",
-    "fs": "0.0.1-security",
-    "google": "^2.1.0",
-    "google-scraper": "^1.1.2"
+    "express": "^4.16.4",
+    "google": "^2.1.0"
   },
   "devDependencies": {},
   "scripts": {
-	"start": "node app.js"
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": ""
 }
