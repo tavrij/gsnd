@@ -23,8 +23,8 @@ google(title, function (err, res,links){
 		nextCounter += 1;
 		if (res.next) res.next();
 	}
-	let json = JSON.stringify(results);
-		ress.end(json);
+	//let json = JSON.stringify(results);
+		ress.json(results);
 	})
 
 });
