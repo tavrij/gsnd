@@ -7,7 +7,7 @@ let nextCounter = 0
 let title = reqq.query.title;
 		let results = Array();
 google(title, function (err, res,links){
-	if (err) console.error(err)
+	//if (err) console.error(err)
 
 
 	for (let i = 0; i < res.links.length; ++i) {
