@@ -4,12 +4,11 @@
   "description": "gsnd",
   "main": "app.js",
   "dependencies": {
-    "express": "",
-    "google": ""
+    "express": "^4.16.4",
+    "google": "^2.1.0"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node app.js"
   },
   "author": "",
   "license": ""
