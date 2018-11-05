@@ -2,8 +2,8 @@ let express = require('express');
 let app = express();
 let google = require('google');
 app.get('/g/', function(reqq, ress) {
-google.resultsPerPage = 100
-let nextCounter = 0
+google.resultsPerPage = 100;
+let nextCounter = 0;
 let title = reqq.query.title;
 		let results = Array();
 google(title, function (err, res,links){
@@ -11,7 +11,7 @@ google(title, function (err, res,links){
 
 
 	for (let i = 0; i < res.links.length; ++i) {
-		results.push(res.links[i])
+		results.push(res.links[i]);
 		let link = res.links[i];
 		/* console.log(link.title + ' - ' + link.href)
 		console.log(link.description + "\n") */
@@ -20,11 +20,11 @@ google(title, function (err, res,links){
 	}
 
 	if (nextCounter < 4) {
-		nextCounter += 1
-		if (res.next) res.next()
+		nextCounter += 1;
+		if (res.next) res.next();
 	}
-
-		ress.json(results)	
+	let json = JSON.stringify(results);
+		ress.end(json);
 	})
 
 });
