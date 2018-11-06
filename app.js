@@ -3,6 +3,7 @@ let app = express();
 let google = require('google');
 app.get('/g/', function(reqq, ress) {
 google.resultsPerPage = 100;
+google.lang="fa";
 let nextCounter = 0;
 let title = reqq.query.title;
 		let results = Array();
@@ -23,8 +24,8 @@ google(title, function (err, res,links){
 		nextCounter += 1;
 		if (res.next) res.next();
 	}
-	//let json = JSON.stringify(results);
-		ress.json(results);
+	let json = JSON.stringify(results);
+	ress.end(json);
 	})
 
 });
